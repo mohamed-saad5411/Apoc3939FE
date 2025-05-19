@@ -1,0 +1,82 @@
+@media screen and (max-width: 698px) {
+    .carousel img {
+        height: 400px;
+    }
+
+    .tot-calc {
+        flex-direction: column;
+    }
+    #formPayment{
+        width: 95% !important;
+    }
+
+    nav .calc-img {
+        width: 15rem;
+        height: 15rem;
+        transform: translateX(-1rem);
+    }
+    #scrollNav,#mainNav{
+        display: none;
+    }
+    #smNav{
+        display: block !important;
+    }
+    #smNav .navbar-nav , #scrollSmNav .navbar-nav{
+    flex-direction: row !important;
+    width: 65%;
+    }
+
+    .navbar .w-75 {
+        width: 100% !important;
+    }
+
+    nav {
+        z-index: 999;
+    }
+
+    nav .icon {
+        width: 2.8rem;
+        height: 2.8rem;
+        background-color: rgb(41, 41, 184);
+        transition: all 0.8s;
+        border: 3px solid rgb(41, 41, 184);
+    }
+
+    nav .icon i {
+        transition: all 0.8s;
+    }
+
+    nav .icon:hover {
+        background-color: #fff;
+    }
+
+    footer .icon:hover i {
+        color: rgb(41, 41, 184) !important;
+    }
+
+    header {
+        height: 40vh;
+        background-size: cover;
+    }
+
+    header button {
+        transform: translate(-1rem, 13rem);
+        width: 8rem;
+        font-size: 1.1rem !important;
+    }
+    #toRight{
+        opacity: 100 !important;
+    }
+    #userData{
+        font-size: .75rem;
+        font-weight: bold;
+    }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .btn-md-sm{
+        font-size: .9rem !important;
+        font-weight: bold;
+    }
+}
