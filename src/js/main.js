@@ -57,8 +57,8 @@ submitBtn?.addEventListener('click', function (e) {
 })
 
 async function getAllUsers() {
-    const url = "http://localhost:5000/api/v1/users";
-    // const url = "https://apoc13939be.vercel.app/users";
+    // const url = "http://localhost:5000/api/v1/users";
+    const url = "https://apoc3939betest1.vercel.app/api/v1/users";
     try {
         const response = await fetch(url, {
             method: 'GET',
@@ -84,8 +84,8 @@ async function getAllUsers() {
 }
 
 async function rigester() {
-    const url = "http://localhost:5000/api/v1/register";
-    // const url = "https://apoc13939be.vercel.app/register";
+    // const url = "http://localhost:5000/api/v1/register";
+    const url = "https://apoc3939betest1.vercel.app/api/v1/register";
     try {
         const response = await fetch(url, {
             method: 'POST',
@@ -106,9 +106,8 @@ async function rigester() {
 
         const myjson = await response.json();
         if (myjson.message == 'success') {
-
+            console.log(myjson);
         }
-        // console.log(myjson);
     } catch (error) {
         console.error(error.message);
     }
@@ -119,7 +118,9 @@ async function rigester() {
 let paymentBtn = document.getElementById('paymentBtn')
 paymentBtn.addEventListener('click', async (e) => {
     e.preventDefault()
-    await fetch('http://localhost:5000/api/v1/register/create-checkout-session/682649627d11fb0aa148216a', {
+    console.log(e);
+    
+    await fetch('https://apoc3939betest1.vercel.app/api/v1/register/create-checkout-session/682649627d11fb0aa148216a', {
         method: 'POST',
         body: JSON.stringify({
             name: userName.value,
