@@ -16,17 +16,17 @@ let build = document.getElementById('build')
 let total = document.getElementById('total')
 
 totalMoney = 0
-// function getData() {
-//     let salaryCalc = (moneyInp.value * 0.025)
-//     salary.innerHTML = salaryCalc.toFixed(2)
-//     let buildCalc = (buildInp.value * 0.025)
-//     build.innerHTML = buildCalc.toFixed(2)
-//     let constructionCalc = (constructionProfitInp.value * 0.025)
-//     construction.innerHTML = constructionCalc.toFixed(2)
+function getData() {
+    let salaryCalc = (moneyInp.value * 0.025)
+    salary.innerHTML = salaryCalc.toFixed(2)
+    let buildCalc = (buildInp.value * 0.025)
+    build.innerHTML = buildCalc.toFixed(2)
+    let constructionCalc = (constructionProfitInp.value * 0.025)
+    construction.innerHTML = constructionCalc.toFixed(2)
 
-//     totalMoney = salaryCalc + buildCalc + constructionCalc
-//     total.innerHTML = totalMoney.toFixed(2)
-// }
+    totalMoney = salaryCalc + buildCalc + constructionCalc
+    total.innerHTML = totalMoney.toFixed(2)
+}
 
 // for register
 
@@ -56,64 +56,91 @@ submitBtn?.addEventListener('click', function (e) {
     rigester()
 })
 
-// async function getAllUsers() {
-//     const url = "https://apoc13939be.vercel.app/users";
-//     try {
-//         const response = await fetch(url, {
-//             method: 'GET',
-//             headers: {
-//                 "Content-Type": "application/json",
-//             },
-//         });
-//         if (!response.ok) {
-//             throw new Error(`Response status: ${response.status}`);
-//         }
-//         const { users } = await response.json();
-//         let cartoona = ''
-//         users.map((user, index) => {
-//             cartoona += `<tr><td>${index+1}</td>
-//             <td>${user.name}</td>
-//                 <td>${user.phone}</td>
-//                 <td>${user.payment}</td></tr>`
-//         })
-//         document.getElementById('userData').innerHTML = cartoona
-//     } catch (error) {
-//         console.error(error.message);
-//     }
-// }
+async function getAllUsers() {
+    const url = "http://localhost:5000/api/v1/users";
+    // const url = "https://apoc13939be.vercel.app/users";
+    try {
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
+        const { users } = await response.json();
+        let cartoona = ''
+        users.map((user, index) => {
+            cartoona += `<tr><td>${index + 1}</td>
+            <td>${user.name}</td>
+                <td>${user.phone}</td>
+                <td>${user.payment}</td></tr>`
+        })
+        document.getElementById('userData').innerHTML = cartoona
+    } catch (error) {
+        console.error(error.message);
+    }
+}
 
-// async function rigester() {
-//     const url = "https://apoc13939be.vercel.app/register";
-//     try {
-//         const response = await fetch(url, {
-//             method: 'POST',
-//             body: JSON.stringify({
-//                 name: userName.value,
-//                 email: userEmail.value,
-//                 phone: userPhone.value,
-//                 payment: userPayment.value,
-//             }),
-//             headers: {
-//                 "Content-Type": "application/json",
-//             },
-//         });
+async function rigester() {
+    const url = "http://localhost:5000/api/v1/register";
+    // const url = "https://apoc13939be.vercel.app/register";
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            body: JSON.stringify({
+                name: userName.value,
+                email: userEmail.value,
+                phone: userPhone.value,
+                payment: userPayment.value,
+            }),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
 
-//         if (!response.ok) {
-//             throw new Error(`Response status: ${response.status}`);
-//         }
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
 
-//         const myjson = await response.json();
-//         if (myjson.message == 'success') {
+        const myjson = await response.json();
+        if (myjson.message == 'success') {
 
-//         }
-//         console.log(myjson);
-//     } catch (error) {
-//         console.error(error.message);
-//     }
-// }
+        }
+        // console.log(myjson);
+    } catch (error) {
+        console.error(error.message);
+    }
+}
 
 //http://localhost:3000/api/v1/user/register
+//payment
+let paymentBtn = document.getElementById('paymentBtn')
+paymentBtn.addEventListener('click', async (e) => {
+    e.preventDefault()
+    await fetch('http://localhost:5000/api/v1/register/create-checkout-session/682649627d11fb0aa148216a', {
+        method: 'POST',
+        body: JSON.stringify({
+            name: userName.value,
+            email: userEmail.value,
+            payment: userPayment.value,
+        }),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }).then(async (res) => {
+        if (res.ok) return res.json()
+            // const json = await res.json()
+        // return await Promise.reject(json)
+    }).then(({ url }) => {
+        window.location.href = url
+        // console.log(url);
+        
+    }).catch((err) => console.log(err.error)
+    )
 
+})
 // async function payment() {
 //     const url = "http://localhost:3000/api/v1/user/register/682649627d11fb0aa148216a";
 //     try {

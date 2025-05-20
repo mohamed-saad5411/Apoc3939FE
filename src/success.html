@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/rwd.css">
     <link rel="stylesheet" href="css/animate.css">
 
-    <title>Apoc 3939/حساب ذكاتك</title>
+    <title>Apoc 3939/اتبرع الآن </title>
 </head>
 
 <body>
@@ -33,24 +33,17 @@
                     <li class="nav-item">
                         <a class="nav-link text- fw-bold" href="../index.html"> تواصل معنا</a>
                     </li>
+
+
                 </ul>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <div class="bg w-">
-                        <a href="../index.html">
-                            <li class="nav-item d-flex flex-column align-items-center justify-content-center">
-                                <i class="fa-solid fa-house fa-2xl text-success pointer"></i>
-                                <a class="nav-link  mx-1 fw-bold" aria-current="page" href="../index.html">الرئيسية</a>
-                            </li>
-                        </a>
-                    </div>
-                    <div class="bg- w-">
-                        <a href="register.html">
-                            <li class="nav-item d-flex flex-column align-items-center justify-content-center">
-                                <i class="fa-solid fa-money-bill-trend-up fa-2xl text-success pointer"></i>
-                                <a class="nav-link  mx-1 fw-bold" href="register.html">اتبرع الآن</a>
-                            </li>
-                        </a>
-                    </div>
+                    <a href="calculation.html">
+                        <li class="nav-item d-flex flex-column align-items-center mx-2 justify-content-center">
+                            <i class="fa-solid fa-calculator fa-2x text-success pointer"></i>
+                            <a class="nav-link  mx-1 fw-bold" aria-current="page" href="calculation.html">احسب
+                                زكاتك</a>
+                        </li>
+                    </a>
                 </ul>
             </div>
         </div>
@@ -69,10 +62,10 @@
                     </a>
                 </div>
                 <div class="bg- w-">
-                    <a href="register.html">
+                    <a href="calculation.html">
                         <li class="nav-item d-flex flex-column align-items-center justify-content-center">
-                            <i class="fa-solid fa-money-bill-trend-up fa-lg text-success pointer"></i>
-                            <a class="nav-link  mx-1 fw-bold" href="register.html">اتبرع الآن</a>
+                            <i class="fa-solid fa-calculator fa-lg text-success pointer"></i>
+                            <a class="nav-link  mx-1 fw-bold" href="calculation.html"> احسب زكاتك</a>
                         </li>
                     </a>
                 </div>
@@ -80,72 +73,11 @@
         </div>
     </nav>
 
-    <section>
-        <div>
-            <div class="container my-4">
-                <h2 class="h1">حساب زكاتك</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="border border-1 border-muted rounded-3 p-4">
-                            <h4 class="border-bottom bg-body-tertiary m-0 pb-2">النقود</h4>
-                            <div class="mt-4">
-                                <p class="m-0 pb-1">أدخل قيمة النقود التي تملكها</p>
-                                <div class="d-flex justify-content-between">
-                                    <input value="" name="" id="moneyInp" placeholder="أدخل القيمة . . ." type="number"
-                                        class="form-control w-50">
-                                    <button id="moneyBtn" onclick="getData()" class="btn btn-primary">اعرف
-                                        القيمة</button>
-                                </div>
-                                <h5 class="bg-body-tertiary mt-3">قيمة زكاة النقود : <span id="salary">0</span> جنيه
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="border border-1 border-muted rounded-3 p-4">
-                            <h4 class="border-bottom bg-body-tertiary m-0 pb-2">العقارات</h4>
-                            <div class="mt-4">
-                                <p class="m-0 pb-1"> أرباح العقارات </p>
-                                <div class="d-flex justify-content-between">
-                                    <input value="" name="" id="constructionProfitInp" placeholder="أدخل القيمة . . ."
-                                        type="number" class="form-control w-50">
-                                    <button id="constructionBtn" onclick="getData()" class="btn btn-primary">اعرف
-                                        القيمة</button>
-                                </div>
-                                <h5 class="bg-body-tertiary mt-3">قيمة زكاة العقارات : <span id="construction">0</span>
-                                    جنيه
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="border border-1 border-muted rounded-3 p-4">
-                            <h4 class="border-bottom bg-body-tertiary m-0 pb-2">المباني</h4>
-                            <div class="mt-4">
-                                <p class="m-0 pb-1"> إيجار المباني </p>
-                                <div class="d-flex justify-content-between">
-                                    <input value="" name="" id="buildInp" placeholder="أدخل القيمة . . ." type="number"
-                                        class="form-control w-50">
-                                    <button id="buildBtn" onclick="getData()" class="btn btn-primary">اعرف
-                                        القيمة</button>
-                                </div>
-                                <h5 class="bg-body-tertiary mt-3">قيمة زكاة المباني: <span id="build">0</span> جنيه
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="my-3">
-                    <div
-                        class="d-flex tot-calc align-items-center justify-content-between bg-body-tertiary rounded-3 p-4 ">
-                        <h2 class="bg-body-tertiary fw-bold">إجمالي قيمة الزكاة : <span id="total">0</span> جنيه </h2>
-                        <a href="register.html" class="btn btn-outline-success w-45">اتبرع الان</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="bg-body-tertiary container text-center m-auto p-4 rounded-3 shadow my-3 bg">
+        <h1 class="fw-bold my-3 text-success">تم التبرع بنجاح </h1>
+        <p class="fw-bold h5">نشكركم علي تبرعكم وتقبل الله منا ومنكم صالح الاعمال</p>
+        <img class="w-50 mt-3 rounded-circle" src="images/tbro3 3.jpg" alt="">
     </section>
-
 
     <footer id="footer" class="w-100 py-5 bg-body-tertiary">
         <div>
@@ -208,7 +140,7 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.6.4.min.js"></script>
-    <script src="js/main.js"></script>
+    <script type="" src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
         new WOW().init();
