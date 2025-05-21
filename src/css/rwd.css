@@ -6,7 +6,8 @@
     .tot-calc {
         flex-direction: column;
     }
-    #formPayment{
+
+    #formPayment {
         width: 95% !important;
     }
 
@@ -15,15 +16,11 @@
         height: 15rem;
         transform: translateX(-1rem);
     }
-    #scrollNav,#mainNav{
-        display: none;
-    }
-    #smNav{
-        display: block !important;
-    }
-    #smNav .navbar-nav , #scrollSmNav .navbar-nav{
-    flex-direction: row !important;
-    width: 65%;
+
+    #smNav .navbar-nav,
+    #scrollSmNav .navbar-nav {
+        flex-direction: row !important;
+        width: 65%;
     }
 
     .navbar .w-75 {
@@ -59,23 +56,51 @@
         background-size: cover;
     }
 
-    header button {
-        transform: translate(-1rem, 13rem);
-        width: 8rem;
-        font-size: 1.1rem !important;
+    header .btn-success {
+        transform: translate(-.5rem, 9rem);
+        width: 6rem;
+        padding: .4rem 0rem !important;
+        font-size: 1rem !important;
     }
-    #toRight{
+
+    header .btn-danger {
+        transform: translate(-.5rem, 12rem);
+        width: 6rem;
+        padding: .4rem 0rem !important;
+        font-size: 1rem !important;
+    }
+    .introHead{
+        width: 70% !important;
+    }
+
+    #toRight {
         opacity: 100 !important;
     }
-    #userData{
+
+    #userData {
         font-size: .75rem;
         font-weight: bold;
+    }
+    #whoWeAre .btn-outline-primary ,.progress{
+        margin: 1rem 0;
     }
 
 }
 
+@media screen and (max-width: 992px) {
+
+    #scrollNav,
+    #mainNav {
+        display: none;
+    }
+
+    #smNav {
+        display: block !important;
+    }
+}
+
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-    .btn-md-sm{
+    .btn-md-sm {
         font-size: .9rem !important;
         font-weight: bold;
     }

@@ -116,10 +116,10 @@ async function rigester() {
 //http://localhost:3000/api/v1/user/register
 //payment
 let paymentBtn = document.getElementById('paymentBtn')
-paymentBtn.addEventListener('click', async (e) => {
+paymentBtn?.addEventListener('click', async (e) => {
     e.preventDefault()
     console.log(e);
-    
+
     await fetch('https://apoc3939betest1.vercel.app/api/v1/register/create-checkout-session/682649627d11fb0aa148216a', {
         method: 'POST',
         body: JSON.stringify({
@@ -132,12 +132,12 @@ paymentBtn.addEventListener('click', async (e) => {
         },
     }).then(async (res) => {
         if (res.ok) return res.json()
-            // const json = await res.json()
+        // const json = await res.json()
         // return await Promise.reject(json)
     }).then(({ url }) => {
         window.location.href = url
         // console.log(url);
-        
+
     }).catch((err) => console.log(err.error)
     )
 
@@ -174,21 +174,20 @@ paymentBtn.addEventListener('click', async (e) => {
 let offsetTop = $('#whoWeAre').offset().top
 $(window).scroll(function () {
     let windowTop = $(window).scrollTop()
-
     if (windowTop > offsetTop) {
         document.getElementById('toUp').classList.remove("opacity-0");
-        document.getElementById('scrollNav').classList.remove("visually-hidden");
-        $('#scrollNav').classList.remove("visually-hidden");
-        document.getElementById('scrollSmNav').classList.remove("visually-hidden");
-        $('#scrollSmNav').classList.remove("visually-hidden");
+        document.getElementById('scrollNav')?.classList.remove("d-none");
+        if (window.innerWidth > 992) {
+            document.getElementById('scrollSmNav').classList.add("d-none");
+        } else {
+            document.getElementById('scrollSmNav').classList.remove("d-none");
+        }
     } else {
         document.getElementById('toUp').classList.add("opacity-0");
-        document.getElementById('scrollNav').classList.add("visually-hidden");
-        $('#scrollNav').classList.add("visually-hidden");
-        document.getElementById('scrollSmNav').classList.add("visually-hidden");
-        $('#scrollSmNav').classList.add("visually-hidden");
-
+        document.getElementById('scrollNav')?.classList?.add("d-none");
+        document.getElementById('scrollSmNav').classList.add("d-none");
     }
 
 });
+console.log();
 
