@@ -210,22 +210,59 @@
         </div>
     </nav>
 
-    <header id="main" class="d-flex d- bg-dark align-items- position-relative justify-content-start">
-        <div class="layer position-absolute top-0 start-0 end-0 bottom-0">
-        </div>
-        <div data-wow-duration="1s" data-wow-delay="1s" class="wow fadeInRight">
-            <a href="#tbro3" class="text-decoration-none"><button
-                    class="btn delay-2s btn-success position-absolute fw-bolder py-3 rounded-start-5">تبرع
-                    الآن</button></a>
-            <a href="#whoWeAre" class="text-decoration-none"><button
-                    class="btn delay-2s btn-danger position-absolute fw-bolder py-3 rounded-start-5">قصتنا
-                </button></a>
+    <header id="main" class="d-flex overflow-hidden d- bg-dark align-items- position-relative justify-content-start">
+        <!-- <div class="layer position-absolute top-0 start-0 end-0 bottom-0">
+        </div> -->
+        <div b class="position-absolute head-container d-flex flex-column me-4 justify-content-center">
+            <div>
+                <h2 class="h1 mb-3">علاج سرطان الاطفال بالمجان</h2>
+                <p class="text-muted lead fw-medium">كل تبرعاتك بنسبة 100% تمنح اطفالنا فرصة اكبر للحياة والتغلب علي
+                    المرض</p>
+            </div>
+            <div class="d-flex flex-column bg-">
+                <a href="#tbro3" class="text-decoration-none bg- w-25 my-1"><button
+                        class="btn delay-2s btn-success position- fw-bolder py-3 rounded-start-5">تبرع
+                        الآن</button></a>
+                <a href="#whoWeAre" class="text-decoration-none w-25 my-1"><button
+                        class="btn delay-2s btn-warning position- fw-bolder py-3 rounded-start-5">قصتنا
+                    </button></a>
+            </div>
         </div>
     </header>
 
     <div id="toUp"
         class="bg-primary opacity-0 rounded-circle pointer d-flex align-items-center justify-content-center position-fixed">
         <a href="#main"><i class="fa-solid text-white fa-arrow-up fa-xl"></i></a>
+    </div>
+    <div id="dropNav"
+        class="bg-primary d-none rounded-circle pointer d-flex align-items-center justify-content-center position-fixed">
+        <i class="fa-solid text-white fa-bars fa-xl"></i>
+    </div>
+
+    <div class="res-nav overflow-hidden d-none position-fixed top-0 end-0 start-0 bottom-0 vh-100">
+        <div class="bg- d-flex flex-column align-items-center justify-content-center w-100 h-100">
+            <i id="closeDropNav" class="fa-solid fa-2xl mb-4 pointer fa-xmark"></i>
+            <ul class="navbar-nav text-white p-3 text-end  mt-0 m-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text- active fw-bold" aria-current="page" href="#">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text- fw-bold" href="src/about.html">عن الجمعية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text- fw-bold" href="src/photos.html"> البوم الصور </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text- fw-bold" href="src/videos.html"> الفيدوهات </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text- fw-bold" href="#tbro3"> اتبرع الآن</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text- fw-bold" href="#footer"> تواصل معنا</a>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <section id="whoWeAre" class="d- bg-body-tertiary py-3 my-5">

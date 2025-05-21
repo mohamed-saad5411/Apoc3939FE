@@ -14,15 +14,24 @@
 }
 
 /* ................... 1 header..................... */
+.res-nav{
+    z-index: 999999;
+    transition:  1s !important;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    font-size: 1.5rem;
+}
 nav img {
     width: 5rem;
     height: 5rem;
 }
-.icon-img{
+
+.icon-img {
     width: 4rem;
     height: 4rem;
 
 }
+
 .pay-img {
     width: 3rem;
     height: 3rem;
@@ -36,44 +45,56 @@ nav {
     transition: all 1s;
 }
 
-#toUp {
+#toUp,
+#dropNav,#dropNav2 {
     width: 2.5rem;
     height: 2.5rem;
     z-index: 9999;
     top: 90%;
-    right: 2%;
     transition: all 1s;
 }
 
-#toUp:hover {
+#dropNav ,#dropNav2{
+    left: 2%;
+}
+
+#toUp {
+    right: 2%;
+}
+
+#toUp:hover,
+#dropNav:hover ,#dropNav2:hover {
     background-color: darkblue !important;
 }
 
 header {
-    background-image: url(../images/slider\ 1.jpg);
+    /* background-image: url(../images/cover-photo-1920-x-1080.png); */
+    background-image: url(../images/cover1.png);
     background-position: center center;
     background-size: cover;
     height: 100vh;
+    background-repeat: no-repeat;
     /* background-attachment: fixed; */
-    animation: 50s ease-in-out infinite;
+    animation: 10s ease-in-out infinite;
 }
 
-header .btn-success {
-    transform: translate(-5rem, 15rem);
+.head-container {
+    transform: translate(-4rem, 8rem);
     z-index: 999999;
-    width: 16rem;
-    font-size: 2rem !important;
+
 }
 
-header .btn-danger {
-    transform: translate(-5rem, 21rem);
-    z-index: 999999;
-    width: 16rem;
-    font-size: 2rem !important;
+header .btn-success,
+header .btn-warning {
+    font-size: 1.25rem !important;
+    width: 10rem;
 }
 
-header h1 {
+
+header .h1 {
     font-size: 3rem;
+    font-weight: bolder;
+    text-shadow: 4px 4px 7px gray;
 }
 
 .layer {
@@ -82,47 +103,15 @@ header h1 {
 
 @keyframes bgChange {
     0% {
-        background-image: url(../images/slider\ 1.jpg);
-    }
-
-    10% {
-        background-image: url(../images/slider\ 2.jpg);
-    }
-
-    20% {
-        background-image: url(../images/slider\ 3.jpg);
-    }
-
-    30% {
-        background-image: url(../images/slider\ 4.jpg);
-    }
-
-    40% {
-        background-image: url(../images/slider\ 5.jpg);
+        background-image: url(../images/cover-photo-1920-x-1080.png);
     }
 
     50% {
-        background-image: url(../images/slider\ 6.jpg);
-    }
-
-    60% {
-        background-image: url(../images/slider\ 7.jpg);
-    }
-
-    70% {
-        background-image: url(../images/slider\ 8.jpg);
-    }
-
-    80% {
-        background-image: url(../images/slider\ 9.jpg);
-    }
-
-    90% {
-        background-image: url(../images/slider\ 10.jpg);
+        background-image: url(../images/cover1.png);
     }
 
     100% {
-        background-image: url(../images/slider\ 1.jpg);
+        background-image: url(../images/cover-photo-1920-x-1080.png);
     }
 
 }
@@ -178,6 +167,7 @@ footer {
     background-size: contain;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url(../images/footer.jpg);
 }
-.my-text-location{
+
+.my-text-location {
     font-size: 0.85rem;
 }

@@ -17,7 +17,8 @@
 <body>
     <nav id="mainNav" class="navbar fixed- d- bg-white navbar-expand-lg top-0 start-0 end-0 bg-body-">
         <div data-wow-delay=".3s" class="container  bg-">
-            <a class="navbar-brand" href="../index.html"><img class="rounded-" src="images/logo-Apoc-2022.png" alt=""></a>
+            <a class="navbar-brand" href="../index.html"><img class="rounded-" src="images/logo-Apoc-2022.png"
+                    alt=""></a>
             <div class="collapse navbar-collapse d-flex align-items-center bg-" id="navbarSupportedContent">
                 <ul class="navbar-nav text-dark bg- mt-0 m-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -63,30 +64,60 @@
         </div>
     </nav>
     <nav id="smNav" class="navbar d-none bg-white navbar-expand-lg top-0 start-0 end-0 bg-body-">
-        <div data-wow-delay=".3s" class="container d-flex justify-content-between wow fadeInDown bg-">
-            <a class="navbar-brand bg-" href="../index.html"><img class="rounded-circle" src="images/tbro3 9.jpg"
+        <div class="container  bg- d-flex flex-nowrap">
+            <a class="navbar-brand bg-" href="../index.html"><img class="rounded-" src="images/logo-Apoc-2022.png"
                     alt=""></a>
-            <ul class="navbar-nav bg- d-flex align-items-center justify-content-between m-auto mb-lg-0">
-                <div class="bg w-">
-                    <a href="../index.html">
-                        <li class="nav-item d-flex flex-column align-items-center justify-content-center">
-                            <i class="fa-solid fa-house fa-lg text-success pointer"></i>
-                            <a class="nav-link  mx-1 fw-bold" aria-current="page" href="../index.html">الرئيسية</a>
-                        </li>
-                    </a>
-                </div>
-                <div class="bg- w-">
+            <div class="collapse navbar-collapse  d-flex align-items-center bg-" id="navbarSupportedContent">
+                <ul class="navbar-nav m-0 p-0 text-center bg- m-auto mb-2 bg- mb-lg-0">
                     <a href="calculation.html">
-                        <li class="nav-item d-flex flex-column align-items-center justify-content-center">
-                            <i class="fa-solid fa-calculator fa-lg text-success pointer"></i>
-                            <a class="nav-link  mx-1 fw-bold" href="calculation.html"> احسب زكاتك</a>
+                        <li class="nav-item d-flex flex-column align-items-center mx-2 justify-content-center">
+                            <!-- <i class="fa-solid fa-calculator fa-2x text-success pointer"></i> -->
+                            <img class="icon-img rounded-circle" src="images/حاسبة-زكاة-المال.jpg" alt="">
+                            <a class="nav-link  mx-1 fw-bold" aria-current="page" href="calculation.html">احسب
+                                زكاتك</a>
                         </li>
                     </a>
-                </div>
-            </ul>
+                    <a href="register.html">
+                        <li class="nav-item d-flex flex-column align-items-center mx-2 justify-content-center">
+                            <!-- <i class="fa-solid fa-money-bill-trend-up fa-2x text-success pointer"></i> -->
+                            <img class="icon-img rounded-circle" src="images/tbro3 8.jpg" alt="">
+                            <a class="nav-link  mx-1 fw-bold" href="register.html">اتبرع الآن</a>
+                        </li>
+                    </a>
+                </ul>
+            </div>
         </div>
     </nav>
-   
+
+    <div id="dropNav"
+        class="bg-primary dropNav d-none rounded-circle pointer d-flex align-items-center justify-content-center position-fixed">
+        <i class="fa-solid text-white fa-bars fa-xl"></i>
+    </div>
+    <div class="res-nav overflow-hidden d-none position-fixed top-0 end-0 start-0 bottom-0 vh-100">
+        <div class="bg- d-flex flex-column align-items-center justify-content-center w-100 h-100">
+            <i id="closeDropNav" class="fa-solid fa-2xl mb-4 pointer fa-xmark"></i>
+            <ul class="navbar-nav text-dark p-3 text-end  mt-0 m-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text- active fw-bold" aria-current="page" href="#">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text- fw-bold" href="src/about.html">عن الجمعية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text- fw-bold" href="src/photos.html"> البوم الصور </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text- fw-bold" href="src/videos.html"> الفيدوهات </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text- fw-bold" href="#tbro3"> اتبرع الآن</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text- fw-bold" href="#footer"> تواصل معنا</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <section class="my-5">
         <div class="container">

@@ -52,24 +52,32 @@
     }
 
     header {
-        height: 40vh;
+        height: 35vh;
         background-size: cover;
     }
 
-    header .btn-success {
-        transform: translate(-.5rem, 9rem);
-        width: 6rem;
-        padding: .4rem 0rem !important;
-        font-size: 1rem !important;
+    .head-container {
+        transform: translate(-0.1rem, 1rem);
     }
 
-    header .btn-danger {
-        transform: translate(-.5rem, 12rem);
+    header .btn-success,
+    header .btn-warning {
+        font-size: 0.9rem !important;
+        padding: 4px 4px !important;
         width: 6rem;
-        padding: .4rem 0rem !important;
-        font-size: 1rem !important;
     }
-    .introHead{
+
+
+    header .h1 {
+        font-size: 1.2rem;
+        text-shadow: 3px 3px 5px gray;
+    }
+    header p {
+        font-size: 0.8rem !important;
+        width: 50%;
+    }
+
+    .introHead {
         width: 70% !important;
     }
 
@@ -81,7 +89,9 @@
         font-size: .75rem;
         font-weight: bold;
     }
-    #whoWeAre .btn-outline-primary ,.progress{
+
+    #whoWeAre .btn-outline-primary,
+    .progress {
         margin: 1rem 0;
     }
 
@@ -94,8 +104,11 @@
         display: none;
     }
 
-    #smNav {
+    #smNav ,#dropNav{
         display: block !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 }
 

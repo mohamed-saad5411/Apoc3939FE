@@ -176,18 +176,29 @@ $(window).scroll(function () {
     let windowTop = $(window).scrollTop()
     if (windowTop > offsetTop) {
         document.getElementById('toUp').classList.remove("opacity-0");
+        // document.getElementById('dropNav').classList.remove("opacity-0");
         document.getElementById('scrollNav')?.classList.remove("d-none");
         if (window.innerWidth > 992) {
             document.getElementById('scrollSmNav').classList.add("d-none");
         } else {
+            
+            document.querySelector('#dropNav').addEventListener('click', () => {
+                document.querySelector('.res-nav').classList.remove('d-none')
+                document.body.classList.add("overflow-hidden")
+            })
+            document.getElementById('closeDropNav').addEventListener('click', () => {
+                document.querySelector('.res-nav').classList.add('d-none')
+                document.body.classList.remove("overflow-hidden")
+            })
             document.getElementById('scrollSmNav').classList.remove("d-none");
         }
     } else {
         document.getElementById('toUp').classList.add("opacity-0");
+        // document.getElementById('dropNav').classList.add("opacity-0");
         document.getElementById('scrollNav')?.classList?.add("d-none");
         document.getElementById('scrollSmNav').classList.add("d-none");
     }
 
 });
-console.log();
+
 
