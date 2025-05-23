@@ -19,12 +19,12 @@ totalMoney = 0
 function getData() {
     let salaryCalc = (moneyInp.value * 0.025)
     salary.innerHTML = salaryCalc.toFixed(2)
-    let buildCalc = (buildInp.value * 0.025)
-    build.innerHTML = buildCalc.toFixed(2)
-    let constructionCalc = (constructionProfitInp.value * 0.025)
-    construction.innerHTML = constructionCalc.toFixed(2)
+    // let buildCalc = (buildInp.value * 0.025)
+    // build.innerHTML = buildCalc.toFixed(2)
+    // let constructionCalc = (constructionProfitInp.value * 0.025)
+    // construction.innerHTML = constructionCalc.toFixed(2)
 
-    totalMoney = salaryCalc + buildCalc + constructionCalc
+    totalMoney = salaryCalc
     total.innerHTML = totalMoney.toFixed(2)
 }
 

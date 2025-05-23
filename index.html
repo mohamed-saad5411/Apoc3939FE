@@ -214,19 +214,19 @@
         <!-- <div class="layer position-absolute top-0 start-0 end-0 bottom-0">
         </div> -->
         <div b class="position-absolute head-container d-flex flex-column me-4 justify-content-center">
-            <div>
+            <!-- <div>
                 <h1 class="h1 mb-3 text-success">جمعية مستشفى سرطان اطفال اسكندرية</h1>
                 <h2 class="fs-3 mb-3">علاج سرطان الاطفال بالمجان</h2>
                 <p class="text-muted lead fw-medium">كل تبرعاتك بنسبة 100% تمنح اطفالنا فرصة اكبر للحياة والتغلب علي
                     المرض</p>
-            </div>
+            </div> -->
             <div class="d-flex flex-column bg-">
-                <a href="#tbro3" class="text-decoration-none bg- w-25 my-1"><button
-                        class="btn delay-2s btn-success position- fw-bolder py-3 rounded-start-5">تبرع
-                        الآن</button></a>
                 <a href="#whoWeAre" class="text-decoration-none w-25 my-1"><button
                         class="btn delay-2s btn-warning position- fw-bolder py-3 rounded-start-5">قصتنا
                     </button></a>
+                <a href="#tbro3" class="text-decoration-none bg- w-25 my-1"><button
+                        class="btn delay-2s btn-success position- fw-bolder py-3 rounded-start-5">تبرع
+                        الآن</button></a>
             </div>
         </div>
     </header>
@@ -256,14 +256,16 @@
                 </div>
             </div>
             <div class="bg- btn-">
-                <button class="text-dark carousel-control-prev rounded-circle" type="button" data-bs-target="#carouselExampleFade"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-" aria-hidden="true"><i class="fa-solid fa-arrow-left text-white"></i></span>
+                <button class="text-dark carousel-control-prev rounded-circle" type="button"
+                    data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-" aria-hidden="true"><i
+                            class="fa-solid fa-arrow-left text-white"></i></span>
                     <span class="visually-hidden ">Previous</span>
                 </button>
-                <button class="bg-primary carousel-control-next rounded-circle" type="button" data-bs-target="#carouselExampleFade"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-" aria-hidden="true"><i class="fa-solid fa-arrow-right text-white"></i></span>
+                <button class="bg-primary carousel-control-next rounded-circle" type="button"
+                    data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span class="carousel-control-next-" aria-hidden="true"><i
+                            class="fa-solid fa-arrow-right text-white"></i></span>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
@@ -350,8 +352,8 @@
                     <div class="col-md-8">
                         <div class="my-5">
                             <h2 class="h1 mb-4 introHead bg- border-bottom pb-2 border-1">ادعم <span
-                                    class="text-warning">أسماء</span></h2>
-                            <p>أسماء بطلة من ابطال 57357 ، عمرها 13 سنة ، في الصف الثاني ...</p>
+                                    class="text-warning">منة</span></h2>
+                            <p>منة بطلة من ابطال مستشفى برج العرب الجامعي ، عمرها 13 سنة ، في الصف الثاني ...</p>
                             <p>تم جمع 504,150 جنيه من 670,000 جنيه</p>
                             <div class="bg- text-center">
                                 <div>
@@ -361,7 +363,8 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="src/register.html"><button class="btn btn-warning px-5 py-2">تبرع</button></a>
+                                    <a href="src/register.html"><button
+                                            class="btn btn-warning px-5 py-2">تبرع</button></a>
                                     <button class="btn btn-outline-primary px-5 py-2">مزيد من المعلومات</button>
                                 </div>
                             </div>
@@ -377,7 +380,7 @@
             <div class="container my-4">
                 <h2 class="h1 introHead text-success mb-5 w-25 m- py-3 border-bottom border-1">حساب زكاتك</h2>
                 <div class="row g-4">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="border border-1 border-muted rounded-3 p-4">
                             <h4 class="border-bottom bg-body-tertiary m-0 pb-2">النقود</h4>
                             <div class="mt-4">
@@ -393,7 +396,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6 bg-">
+                        <div class="my-3 bg-">
+                            <div
+                                class="d-flex tot-calc align-items-center justify-content-between bg-body-tertiary rounded-3 p-4 ">
+                                <h2 class="bg-body-tertiary fw-bold">إجمالي قيمة الزكاة : <span id="total">0</span> جنيه
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-4">
                         <div class="border border-1 border-muted rounded-3 p-4">
                             <h4 class="border-bottom bg-body-tertiary m-0 pb-2">العقارات</h4>
                             <div class="mt-4">
@@ -425,15 +437,10 @@
                                 </h5>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="my-3">
-                    <div
-                        class="d-flex tot-calc align-items-center justify-content-between bg-body-tertiary rounded-3 p-4 ">
-                        <h2 class="bg-body-tertiary fw-bold">إجمالي قيمة الزكاة : <span id="total">0</span> جنيه </h2>
-                        <a href="src/register.html" class="btn btn-outline-success w-45">اتبرع الان</a>
-                    </div>
-                </div>
+                <a href="src/register.html" class="btn mt-3 w-100 btn-outline-success w-45">اتبرع الان</a>
+
             </div>
         </div>
     </section>
@@ -624,7 +631,8 @@
                             <i class="fa-solid text-success fa- fa-location-pin"></i>
                             <p class="me-2 m-0">
                             <ol class="pe-3" type="i">
-                                <li class="mb-2 my-text-location"> ش عبد الحميد بدوي – محطة الرمل – الدور الثاني – شقة 9
+                                <li class="mb-2 my-text-location"> 13 ش عبد الحميد بدوي – محطة الرمل – الدور الثاني –
+                                    شقة 9
                                     – بجوار القائد إبراهيم.</li>
                                 <li class="mb-2 my-text-location">مركز محمد رشيد لعلاج الأورام – الدور الثاني –
                                     الأزاريطة – على الترام أمام بريوني
@@ -637,11 +645,12 @@
                         </div>
                         <div class="d-flex my-3 align-items-center">
                             <i class="fa-solid text-primary fa- fa-phone"></i>
-                            <p class="me-2 m-0">01202223939 / +234839839</p>
+                            <p class="me-2 m-0"> 2034839839<span>+</span></p>
                         </div>
                         <div class="d-flex my-3 align-items-center">
                             <i class="fa-brands text-success fa-  fa-whatsapp"></i>
-                            <p class="me-2 m-0">01007770399</p>
+                            <p class="me-2 m-0">01202223939 / 01007770399</p>
+                            <!-- <p class="me-2 m-0">01007770399</p> -->
                         </div>
                         <div class="d-flex my-3 align-items-center">
                             <i class="fa-solid text-danger fa-  fa-envelope"></i>
@@ -654,7 +663,7 @@
         </div>
     </footer>
 
-<!-- <p>Lorem ipsum dolor sit.</p> -->
+    <!-- <p>Lorem ipsum dolor sit.</p> -->
 
     <script src="src/js/bootstrap.bundle.min.js"></script>
     <script src="src/js/jquery-3.6.4.min.js"></script>

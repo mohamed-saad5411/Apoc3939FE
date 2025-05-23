@@ -69,8 +69,8 @@ nav {
 }
 
 header {
-    /* background-image: url(../images/cover-photo-1920-x-1080.png); */
-    background-image: url(../images/cover1.png);
+    background-image: url(../images/cover-photo-1920-x-1080.png);
+    /* background-image: url(../images/cover1.png); */
     background-position: center center;
     background-size: cover;
     height: 100vh;
@@ -80,7 +80,7 @@ header {
 }
 
 .head-container {
-    transform: translate(-4rem, 8rem);
+    transform: translate(-4rem, 18rem);
     z-index: 999999;
 
 }
@@ -194,4 +194,8 @@ footer {
 
 .my-text-location {
     font-size: 0.85rem;
+}
+.phone-old{
+    width: 2rem;
+    height: 2rem;
 }
