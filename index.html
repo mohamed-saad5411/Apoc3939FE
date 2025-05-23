@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/rwd.css">
     <link rel="stylesheet" href="src/css/animate.css">
+    <!-- ************* -->
 
     <title>Apoc 3939</title>
 
 </head>
 
-<body>
+<body class="bg-">
     <nav id="mainNav" class="navbar d- bg-white navbar-expand-lg top-0 start-0 end-0 bg-body-">
         <div class="container  bg-">
             <a class="navbar-brand" href="#"><img class="rounded-" src="src/images/logo-Apoc-2022.png" alt=""></a>
@@ -210,12 +211,13 @@
         </div>
     </nav>
 
-    <header id="main" class="d-flex overflow-hidden d- bg-dark align-items- position-relative justify-content-start">
+    <header id="main" class="d-flex overflow-hidden align-items- position-relative justify-content-start">
         <!-- <div class="layer position-absolute top-0 start-0 end-0 bottom-0">
         </div> -->
         <div b class="position-absolute head-container d-flex flex-column me-4 justify-content-center">
             <div>
-                <h2 class="h1 mb-3">علاج سرطان الاطفال بالمجان</h2>
+                <h1 class="h1 mb-3 text-success">جمعية مستشفى سرطان اطفال اسكندرية</h1>
+                <h2 class="fs-3 mb-3">علاج سرطان الاطفال بالمجان</h2>
                 <p class="text-muted lead fw-medium">كل تبرعاتك بنسبة 100% تمنح اطفالنا فرصة اكبر للحياة والتغلب علي
                     المرض</p>
             </div>
@@ -229,6 +231,46 @@
             </div>
         </div>
     </header>
+
+    <!-- ///// -->
+    <div class="bg- d-flex justify-content- my-3 rounded-end-pill">
+        <!-- <h1 class="">عن الجمعية</h1> -->
+        <div id="carouselExampleFade" class="carousel m-0 p-0 m-auto bg-warning h-100 slide carousel-fade">
+            <div class="carousel-inner p-0 m-0 bg-warning">
+                <div class="carousel-item active">
+                    <img src="src/images/slider 10.jpg" class="d-block h-100 w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="src/images/slider 1.jpg" class="d-block w-100 h-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="src/images/slider 2.jpg" class="d-block w-100 h-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="src/images/slider 3.jpg" class="d-block w-100 h-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="src/images/slider 4.jpg" class="d-block w-100 h-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="src/images/slider 5.jpg" class="d-block w-100 h-100" alt="...">
+                </div>
+            </div>
+            <div class="bg- btn-">
+                <button class="text-dark carousel-control-prev rounded-circle" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-" aria-hidden="true"><i class="fa-solid fa-arrow-left text-white"></i></span>
+                    <span class="visually-hidden ">Previous</span>
+                </button>
+                <button class="bg-primary carousel-control-next rounded-circle" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-" aria-hidden="true"><i class="fa-solid fa-arrow-right text-white"></i></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- ///// -->
 
     <div id="toUp"
         class="bg-primary opacity-0 rounded-circle pointer d-flex align-items-center justify-content-center position-fixed">
@@ -320,7 +362,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <button class="btn btn-warning px-5 py-2">تبرع</button>
+                                    <a href="src/register.html"><button class="btn btn-warning px-5 py-2">تبرع</button></a>
                                     <button class="btn btn-outline-primary px-5 py-2">مزيد من المعلومات</button>
                                 </div>
                             </div>
@@ -617,11 +659,12 @@
 
     <script src="src/js/bootstrap.bundle.min.js"></script>
     <script src="src/js/jquery-3.6.4.min.js"></script>
-    <script src="src/js/main.js"></script>
     <script src="src/js/wow.min.js"></script>
     <script>
         new WOW().init();
     </script>
+    <script src="src/js/main.js"></script>
+    <!-- ************ -->
 </body>
 
 </html>

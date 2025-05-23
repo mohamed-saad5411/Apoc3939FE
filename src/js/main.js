@@ -181,7 +181,7 @@ $(window).scroll(function () {
         if (window.innerWidth > 992) {
             document.getElementById('scrollSmNav').classList.add("d-none");
         } else {
-            
+
             document.querySelector('#dropNav').addEventListener('click', () => {
                 document.querySelector('.res-nav').classList.remove('d-none')
                 document.body.classList.add("overflow-hidden")
@@ -201,4 +201,5 @@ $(window).scroll(function () {
 
 });
 
+// ********************* // 
 
