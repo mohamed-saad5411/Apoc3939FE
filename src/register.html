@@ -90,19 +90,19 @@
         <form id="formFristRegister" class=" p-3 w-100">
             <!-- <h3 class="text-center fs-2 fw-bolder border-bottom pb-3 border-3 my-2 text-success">اول مرة تسجل ؟؟</h3> -->
             <div class="my-2">
-                <label for="userName" class="pb-1 fw-bold fs-5"> الاسم ثلاثي باللغة العربية :</label>
+                <label for="userName" class="pb-1 fw-bold fs-5"> الاسم ثلاثي باللغة العربية : <span id="userValid" class="text-danger fw-normal d-none validation">*يجب ادخال الاسم</span></label>
                 <input class="form-control" type="text" name="userName" id="userName" value="">
             </div>
             <div class="my-2">
-                <label for="userEmail" class="pb-1 fw-bold fs-5"> الايميل :</label>
+                <label for="userEmail" class="pb-1 fw-bold fs-5"> الايميل : <span id="emailValid" class="text-danger fw-normal validation d-none">*يجب ادخال ايميل صحيح </span></label>
                 <input class="form-control" type="email" name="userEmail" id="userEmail" value="">
             </div>
             <div class="my-2">
-                <label for="userPhone" class="pb-1 fw-bold fs-5"> رقم التليفون:</label>
+                <label for="userPhone" class="pb-1 fw-bold fs-5"> رقم التليفون: <span  id="phoneValid" class="text-danger d-none fw-normal validation">*يجب ادخال رقم التليفون صحيح</span></label>
                 <input class="form-control" type="tel" name="userPhone" id="userPhone" value="">
             </div>
             <div class="my-2">
-                <label for="userPayment" class="pb-1 fw-bold fs-5">قيمة التبرع:</label>
+                <label for="userPayment" class="pb-1 fw-bold fs-5">قيمة التبرع: <span id="paymentValid" class="text-danger d-none fw-normal validation">*يجب ادخال القيمة</span></label>
                 <input class="form-control" type="tel" name="userPayment" id="userPayment" value="">
             </div>
 

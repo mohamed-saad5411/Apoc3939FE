@@ -118,6 +118,9 @@ header .h1 {
 }
 
 /* ................... about..................... */
+.progress-bar{
+    width:0%;
+}
 .carousel img {
     height: 600px;
 }
@@ -162,6 +165,9 @@ form {
 
 form button {
     margin: auto;
+}
+.validation{
+    font-size: 1rem;
 }
 
 /* ................... 1 header..................... */
