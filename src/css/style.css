@@ -18,6 +18,9 @@
 }
 
 /* ................... 1 header..................... */
+.navbar{
+    background-color: #e2f8ff !important;
+}
 .nav-link:hover,
 .active {
     color: var(--main-color) !important;
