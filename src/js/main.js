@@ -84,7 +84,7 @@ let validUserName = ''
 let validUserEmail = ''
 let validUserPay = ''
 let validUserPhone = ''
-userName.addEventListener('input', () => {
+userName?.addEventListener('input', () => {
     function validation() {
         if (userName.value !== '') {
             document.querySelector('#userValid').classList.add('d-none')
@@ -95,7 +95,7 @@ userName.addEventListener('input', () => {
     validUserName = validation()
     // console.log(validUserName);
 })
-userEmail.addEventListener('input', () => {
+userEmail?.addEventListener('input', () => {
     let regexEmail = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
     function validation() {
         if (userEmail.value !== '' && regexEmail.test(userEmail.value)) {
@@ -107,7 +107,7 @@ userEmail.addEventListener('input', () => {
     validUserEmail = validation()
     // console.log(validUserName);
 })
-userPhone.addEventListener('input', () => {
+userPhone?.addEventListener('input', () => {
     let regexpNum = /^01[0-2,5]{1}[0-9]{8}$/;
     function validation() {
         if (userPhone.value !== '' && regexpNum.test(userPhone.value)) {
@@ -119,7 +119,7 @@ userPhone.addEventListener('input', () => {
     validUserPhone = validation()
     // console.log(validUserName);
 })
-userPayment.addEventListener('input', () => {
+userPayment?.addEventListener('input', () => {
     function validation() {
         if (userPayment.value !== '') {
             document.querySelector('#paymentValid').classList.add('d-none')
@@ -221,17 +221,35 @@ paymentBtn?.addEventListener('click', async (e) => {
 
 // for nav
 
+
+
+// progress bar
+let progress = document.querySelector('.progress')
+let progressBar = document.querySelector('.progress-bar')
+
+function calcProgressWidth() {
+    let collectMoney = Number(document.querySelector('#collectMoney')?.innerHTML)
+    let totalMoney = Number(document.querySelector('#totalMoney')?.innerHTML)
+    progressBar.style.width = `${collectMoney * 100 / totalMoney}%`
+    progressBar.innerHTML = `${Math.ceil(collectMoney * 100 / totalMoney)}%`
+    console.log();
+
+}
+calcProgressWidth()
+
+
+
+
+
+
+
+
+
+
 let offsetTop = $('#whoWeAre').offset().top
 $(window).scroll(function () {
     let windowTop = $(window).scrollTop()
-    if (windowTop > offsetTop) {
-        document.getElementById('toUp').classList.remove("opacity-0");
-        // document.getElementById('dropNav').classList.remove("opacity-0");
-        document.getElementById('scrollNav')?.classList.remove("d-none");
-        if (window.innerWidth > 992) {
-            document.getElementById('scrollSmNav').classList.add("d-none");
-        } else {
-
+    if (window.innerWidth < 992) {
             document.querySelector('#dropNav').addEventListener('click', () => {
                 document.querySelector('.res-nav').classList.remove('d-none')
                 document.body.classList.add("overflow-hidden")
@@ -241,28 +259,29 @@ $(window).scroll(function () {
                 document.body.classList.remove("overflow-hidden")
             })
             document.getElementById('scrollSmNav').classList.remove("d-none");
+        } else {
+            document.getElementById('scrollSmNav').classList.add("d-none");
         }
+    if (windowTop > offsetTop) {
+        document.getElementById('toUp').classList.remove("opacity-0");
+        document.getElementById('scrollNav')?.classList.remove("d-none");
+        // if (window.innerWidth > 992) {
+        //     document.getElementById('scrollSmNav').classList.add("d-none");
+        // } else {
+        //     document.querySelector('#dropNav').addEventListener('click', () => {
+        //         document.querySelector('.res-nav').classList.remove('d-none')
+        //         document.body.classList.add("overflow-hidden")
+        //     })
+        //     document.getElementById('closeDropNav').addEventListener('click', () => {
+        //         document.querySelector('.res-nav').classList.add('d-none')
+        //         document.body.classList.remove("overflow-hidden")
+        //     })
+        //     document.getElementById('scrollSmNav').classList.remove("d-none");
+        // }
     } else {
         document.getElementById('toUp').classList.add("opacity-0");
-        // document.getElementById('dropNav').classList.add("opacity-0");
         document.getElementById('scrollNav')?.classList?.add("d-none");
         document.getElementById('scrollSmNav').classList.add("d-none");
     }
 
 });
-
-// progress bar
-let progress = document.querySelector('.progress')
-let progressBar = document.querySelector('.progress-bar')
-
-function calcProgressWidth() {
-    let collectMoney = Number(document.querySelector('#collectMoney').innerHTML)
-    let totalMoney = Number(document.querySelector('#totalMoney').innerHTML)
-    progressBar.style.width = `${collectMoney * 100 / totalMoney}%`
-    progressBar.innerHTML = `${Math.ceil(collectMoney * 100 / totalMoney)}%`
-    console.log();
-
-}
-calcProgressWidth()
-
-

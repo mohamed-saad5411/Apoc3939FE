@@ -1,12 +1,16 @@
 :root {
-    --main-color: ;
-    --hover-color: #;
+    --hover-color: rgb(54, 54, 206);
     direction: rtl;
     scroll-behavior: smooth;
+    --main-color: rgb(0, 0, 135)
 }
 
 .pointer {
     cursor: pointer;
+}
+
+.bg-mainColor {
+    background-color: var(--main-color);
 }
 
 .w-45 {
@@ -14,14 +18,23 @@
 }
 
 /* ................... 1 header..................... */
+.nav-link:hover,
+.active {
+    color: var(--main-color) !important;
+}
 
-.res-nav{
+.nav-link {
+    transition: all 0.5s;
+}
+
+.res-nav {
     z-index: 999999;
-    transition:  1s !important;
-    background-color: rgba(0,0,0,0.9);
+    transition: 1s !important;
+    background-color: rgba(0, 0, 0, 0.9);
     color: white;
     font-size: 1.5rem;
 }
+
 nav img {
     width: 5rem;
     height: 5rem;
@@ -47,7 +60,8 @@ nav {
 }
 
 #toUp,
-#dropNav,#dropNav2 {
+#dropNav,
+#dropNav2 {
     width: 2.5rem;
     height: 2.5rem;
     z-index: 9999;
@@ -55,7 +69,8 @@ nav {
     transition: all 1s;
 }
 
-#dropNav ,#dropNav2{
+#dropNav,
+#dropNav2 {
     left: 2%;
 }
 
@@ -64,18 +79,17 @@ nav {
 }
 
 #toUp:hover,
-#dropNav:hover ,#dropNav2:hover {
-    background-color: darkblue !important;
+#dropNav:hover,
+#dropNav2:hover {
+    background-color: var(--hover-color) !important;
 }
 
 header {
     background-image: url(../images/cover-photo-1920-x-1080.png);
-    /* background-image: url(../images/cover1.png); */
     background-position: center center;
     background-size: cover;
     height: 100vh;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
     animation: 10s ease-in-out infinite;
 }
 
@@ -102,56 +116,41 @@ header .h1 {
     background-color: rgba(9, 9, 9, .5);
 }
 
-@keyframes bgChange {
-    0% {
-        background-image: url(../images/cover-photo-1920-x-1080.png);
-    }
-
-    50% {
-        background-image: url(../images/cover1.png);
-    }
-
-    100% {
-        background-image: url(../images/cover-photo-1920-x-1080.png);
-    }
-
-}
-
 /* ................... about..................... */
-.progress-bar{
-    width:0%;
+#imgContainer img{
+    width: 17rem;
+    height: 17rem;
 }
+.progress-bar {
+    width: 0%;
+}
+
 .carousel img {
     height: 600px;
 }
-#carouselExampleFade{
+
+#carouselExampleFade {
     width: 50%;
     height: 20rem;
 }
-.carousel-control-prev, .carousel-control-next{
+
+.carousel-control-prev,
+.carousel-control-next {
     background-color: black !important;
     width: 1.8rem;
     height: 1.8rem;
     top: 45%;
 }
-.carousel-control-next{
+
+.carousel-control-next {
     right: -2.5%;
 }
-.carousel-control-prev{
+
+.carousel-control-prev {
     left: -2.5%;
 }
-/* .rounded-end-pill{
-    height: 15rem;
-    background-image: linear-gradient(rgb(238, 244, 69),rgb(201, 216, 40)); */
-/* } */
-/* .rounded-end-pill img{
-    width: 400px !important;
-    height: 100% !important;
-} */
+
 /* ................... تبرع ..................... */
-/* .card {
-    height: 500px;
-} */
 
 .card img {
     height: 300px;
@@ -166,7 +165,8 @@ form {
 form button {
     margin: auto;
 }
-.validation{
+
+.validation {
     font-size: 1rem;
 }
 
@@ -175,9 +175,9 @@ form button {
 .icon {
     width: 3.3rem;
     height: 3.3rem;
-    background-color: rgb(41, 41, 184);
+    background-color: var(--main-color);
     transition: all 0.8s;
-    border: 3px solid rgb(41, 41, 184);
+    border: 3px solid var(--main-color);
 }
 
 .icon i {
@@ -189,7 +189,7 @@ form button {
 }
 
 .icon:hover i {
-    color: rgb(41, 41, 184) !important;
+    color: var(--main-color) !important;
 }
 
 footer {
@@ -201,7 +201,8 @@ footer {
 .my-text-location {
     font-size: 0.85rem;
 }
-.phone-old{
+
+.phone-old {
     width: 2rem;
     height: 2rem;
 }
