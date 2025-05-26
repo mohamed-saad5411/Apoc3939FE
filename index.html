@@ -10,7 +10,18 @@
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/rwd.css">
     <link rel="stylesheet" href="src/css/animate.css">
-
+    <!-- ****************** -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Marhey:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Marhey:wght@300..700&display=swap"
+        rel="stylesheet">
+    <!-- ****************** -->
     <title>Apoc 3939</title>
 
 </head>
@@ -18,8 +29,7 @@
 <body class="bg-">
     <nav id="mainNav" class="navbar d- bg-white navbar-expand-lg top-0 start-0 end-0 bg-body-">
         <div class="container">
-            <a class="navbar-brand" href="#"><img class="rounded-"
-                    src="src/images/logo-Apoc-2022.png" alt=""></a>
+            <a class="navbar-brand" href="#"><img class="rounded-" src="src/images/logo-Apoc-2022.png" alt=""></a>
             <div class="collapse navbar-collapse d-flex align-items-center bg-" id="navbarSupportedContent">
                 <ul class="navbar-nav text-dark bg- mt-0 m-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -120,8 +130,8 @@
 
     <nav id="smNav" class="navbar d-none bg-white navbar-expand-lg top-0 start-0 end-0 bg-body-">
         <div class="container  bg- d-flex flex-nowrap">
-            <a class="navbar-brand bg-" href="index.html"><img class="-circle"
-                    src="src/images/logo-Apoc-2022.png" alt=""></a>
+            <a class="navbar-brand bg-" href="index.html"><img class="-circle" src="src/images/logo-Apoc-2022.png"
+                    alt=""></a>
             <div class="collapse navbar-collapse  d-flex align-items-center bg-" id="navbarSupportedContent">
                 <ul class="navbar-nav p-0 text-center bg- me-auto ms-3 mb-2 bg- mb-lg-0">
                     <a href="src/calculation.html">
@@ -145,10 +155,10 @@
     </nav>
     <nav id="scrollSmNav" class="navbar d-none fixed-top bg-white navbar-expand-lg top-0 start-0 end-0 bg-body-">
         <div class="container bg- d-flex flex-nowrap">
-            <a class="navbar-brand bg-" href="index.html"><img class="-circle"
-                    src="src/images/logo-Apoc-2022.png" alt=""></a>
+            <a class="navbar-brand bg-" href="index.html"><img class="-circle" src="src/images/logo-Apoc-2022.png"
+                    alt=""></a>
             <div class="collapse navbar-collapse  d-flex align-items-center bg-" id="navbarSupportedContent">
-                <ul class="navbar-nav m-0 p-0 text-center bg- me-4 mb-2 bg- mb-lg-0">
+                <ul class="navbar-nav p-0 text-center bg- me-auto ms-3 mb-2 bg- mb-lg-0">
                     <a href="src/calculation.html">
                         <li class="nav-item d-flex flex-column align-items-center mx-2 justify-content-center">
                             <!-- <i class="fa-solid fa-calculator fa-2x text-success pointer"></i> -->
@@ -182,8 +192,7 @@
         </div>
     </header>
     <!-- 0000000000000000000000 -->
-    <div class="bg- d-flex my-3 rounded-end-pill">
-        <!-- <h1 class="">عن الجمعية</h1> -->
+    <!-- <div class="bg- d-flex my-3 rounded-end-pill">
         <div id="carouselExampleFade" class="carousel m-0 p-0 m-auto bg-warning h-100 slide carousel-fade">
             <div class="carousel-inner p-0 m-0 bg-warning">
                 <div class="carousel-item active">
@@ -220,7 +229,7 @@
                 </button>
             </div>
         </div>
-    </div>
+    </div> -->
     <div id="toUp"
         class="bg-mainColor opacity-0 rounded-circle pointer d-flex align-items-center justify-content-center position-fixed">
         <a href="#main"><i class="fa-solid text-white fa-arrow-up fa-xl"></i></a>
@@ -295,7 +304,7 @@
                     <div class="col-md-8">
                         <div class="my-5">
                             <h2 class="h1 mb-4 introHead bg- border-bottom pb-2 border-1">ادعم <span
-                                    class="text-warning">منة</span></h2>
+                                    class="text-warning fs-2">منة</span></h2>
                             <p>منة بطلة من ابطال مستشفى برج العرب الجامعي ، عمرها 13 سنة ، في الصف الثاني ...</p>
                             <p>تم جمع <span id="collectMoney">504150</span> جنيه من <span id="totalMoney">670000</span>
                                 جنيه</p>
@@ -323,7 +332,7 @@
                 <div class="row g-4">
                     <div class="col-md-6">
                         <div class="border border-1 border-muted rounded-3 p-4">
-                            <h4 class="border-bottom bg-body-tertiary m-0 pb-2">النقود</h4>
+                            <h4 class="border-bottom bg-body-tertiary m-0 pb-2 text-dark">النقود</h4>
                             <div class="mt-4">
                                 <p class="m-0 pb-1"> أدخل قيمة النقود التي تملكها <span class="text-danger">(اقل قيمة 50
                                         جنيها)</span></p>
@@ -333,7 +342,7 @@
                                     <button id="moneyBtn" onclick="getData()" class="btn btn-primary">اعرف
                                         القيمة</button>
                                 </div>
-                                <h5 class="bg-body-tertiary mt-3">قيمة زكاة النقود : <span id="salary">0</span> جنيه
+                                <h5 class="bg-body-tertiary mt-3 text-dark">قيمة زكاة النقود : <span id="salary">0</span> جنيه
                                 </h5>
                             </div>
                         </div>
@@ -342,7 +351,7 @@
                         <div class="my-3 bg-">
                             <div
                                 class="d-flex tot-calc align-items-center justify-content-between bg-body-tertiary rounded-3 p-4 ">
-                                <h2 class="bg-body-tertiary fw-bold">إجمالي قيمة الزكاة : <span id="total">0</span> جنيه
+                                <h2 class="bg-body-tertiary fw-bold text-dark">إجمالي قيمة الزكاة : <span id="total" class="text-success fs-3">.</span> جنيه
                                 </h2>
                             </div>
                         </div>
@@ -541,9 +550,9 @@
             <div class="container bg-">
                 <div class="row align-items-center">
                     <div class="col-md-4">
-                        <a href="#"> <img class="w-100 rounded-circle" src="src/images/logo.jpg" alt=""></a>
+                        <a href="#"> <img class="w-100 rounded-circle" src="src/images/final img/pp-.png" alt=""></a>
                     </div>
-                    <div class="col-md-4 my-3">
+                    <div class="col-md-4 w-sm-100 my-3">
                         <div class="d-flex w-75 m-auto bg- h-100 align-items-center icons justify-content-around">
                             <div
                                 class="icon mx-1 pointer d-flex align-items-center justify-content-center rounded-circle">
@@ -567,7 +576,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 text-white">
+                    <div class="col-md-4 bg- w-sm-100 text-white">
                         <h2 class="h1 mb-4">تواصل معنا</h2>
                         <div class="d-flex my-3 align-items-center">
                             <i class="fa-solid text-success fa- fa-location-pin"></i>
@@ -587,11 +596,11 @@
                         </div>
                         <div class="d-flex my-3 align-items-center">
                             <i class="fa-solid text-primary fa- fa-phone"></i>
-                            <p class="me-2 m-0"> 2034839839<span>+</span></p>
+                            <p class="me-2 m-0">01202223939 / 2034839839<span>+</span></p>
                         </div>
                         <div class="d-flex my-3 align-items-center">
                             <i class="fa-brands text-success fa-  fa-whatsapp"></i>
-                            <p class="me-2 m-0">01202223939 / 01007770399</p>
+                            <p class="me-2 m-0">01007770399</p>
                             <!-- <p class="me-2 m-0">01007770399</p> -->
                         </div>
                         <div class="d-flex my-3 align-items-center">

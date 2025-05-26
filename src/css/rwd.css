@@ -100,10 +100,6 @@
         width: 50%;
     }
 
-    .introHead {
-        width: 70% !important;
-    }
-
     #toRight {
         opacity: 100 !important;
     }
@@ -120,11 +116,53 @@
 
 }
 
+@media screen and (min-width: 698px) and (max-width: 767px) {
+
+    #tbro3 .col-md-6 {
+        width: 80% !important;
+    }
+
+}
+
+@media screen and (min-width: 698px) and (max-width: 992px) {
+    header {
+        height: 60vh;
+        background-color: aqua;
+        background-size: cover;
+    }
+
+    header .btn-success,
+    header .btn-warning {
+        font-size: 1.2rem !important;
+        padding: 4px 4px !important;
+        width: 6rem;
+    }
+
+    .head-container {
+        transform: translate(-.2rem, 14rem);
+    }
+    #footer .row{
+        flex-direction: column;
+    } 
+    .w-sm-100{
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
 @media screen and (max-width: 992px) {
+    .introHead {
+        width: 70% !important;
+    }
 
     #scrollNav,
     #mainNav {
         display: none;
+    }
+
+    nav ul {
+        flex-direction: row !important;
     }
 
     #smNav,
@@ -140,5 +178,9 @@
     .btn-md-sm {
         font-size: .9rem !important;
         font-weight: bold;
+    }
+
+    nav .nav-link {
+        font-size: 0.9rem;
     }
 }

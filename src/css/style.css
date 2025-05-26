@@ -5,6 +5,30 @@
     --main-color: rgb(0, 0, 135)
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family: "Marhey", sans-serif ;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    color: #198754 !important;
+}
+
+p,
+li,
+a,
+button,
+span {
+    font-family: "Alexandria", sans-serif !important;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-size: 0.9rem !important;
+}
+
 .pointer {
     cursor: pointer;
 }
@@ -18,9 +42,10 @@
 }
 
 /* ................... 1 header..................... */
-.navbar{
+.navbar {
     /* background-color: #e2f8ff !important; */
 }
+
 .nav-link:hover,
 .active {
     color: var(--main-color) !important;
@@ -72,6 +97,11 @@ nav {
     transition: all 1s;
 }
 
+.head-container {
+    transform: translate(-.4rem, 18rem);
+    z-index: 999999;
+}
+
 #dropNav,
 #dropNav2 {
     left: 2%;
@@ -96,11 +126,7 @@ header {
     animation: 10s ease-in-out infinite;
 }
 
-.head-container {
-    transform: translate(-4rem, 18rem);
-    z-index: 999999;
 
-}
 
 header .btn-success,
 header .btn-warning {
@@ -120,10 +146,11 @@ header .h1 {
 }
 
 /* ................... about..................... */
-#imgContainer img{
+#imgContainer img {
     width: 17rem;
     height: 17rem;
 }
+
 .progress-bar {
     width: 0%;
 }
