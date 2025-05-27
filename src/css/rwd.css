@@ -51,12 +51,15 @@
         color: rgb(41, 41, 184) !important;
     }
 
-    header img , header video {
+    header img  {
+        height: 37vh !important;
+    }
+     header video {
         height: 50vh !important;
     }
 
     .head-container {
-        transform: translate(-0.5rem, 11rem);
+        transform: translate(-0.5rem, 9rem);
     }
 
     #carouselExampleFade {
