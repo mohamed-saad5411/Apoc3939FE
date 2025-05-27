@@ -59,7 +59,7 @@
     }
 
     .head-container {
-        transform: translate(-0.5rem, 9rem);
+        transform: translate(-0.5rem, 10rem);
     }
 
     #carouselExampleFade {
@@ -76,7 +76,7 @@
 
     header .btn-success,
     header .btn-warning {
-        font-size: 0.9rem !important;
+        font-size: 0.75rem !important;
         padding: 4px 4px !important;
         width: 6rem;
     }
