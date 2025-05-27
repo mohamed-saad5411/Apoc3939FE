@@ -118,13 +118,14 @@ nav {
 }
 
 header {
-    background-image: url(../images/cover-photo-1920-x-1080.png);
-    background-position: center center;
-    background-size: cover;
-    height: 100vh;
-    background-repeat: no-repeat;
-    animation: 10s ease-in-out infinite;
+    /* background-image: url(../images/cover-photo-1920-x-1080.png); */
+    /* background-position: center center; */
+    /* background-size: contain; */
+    /* height: 100vh; */
+    /* background-repeat: no-repeat; */
+    animation:  10s ease-in-out infinite;
 }
+
 
 
 
@@ -155,7 +156,7 @@ header .h1 {
     width: 0%;
 }
 
-.carousel img {
+/* .carousel img {
     height: 600px;
 }
 
@@ -178,7 +179,7 @@ header .h1 {
 
 .carousel-control-prev {
     left: -2.5%;
-}
+} */
 
 /* ................... تبرع ..................... */
 

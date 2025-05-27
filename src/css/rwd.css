@@ -51,14 +51,12 @@
         color: rgb(41, 41, 184) !important;
     }
 
-    header {
-        height: 37vh;
-        background-color: aqua;
-        background-size: cover;
+    header img , header video {
+        height: 50vh !important;
     }
 
     .head-container {
-        transform: translate(-0.2rem, 8rem);
+        transform: translate(-0.5rem, 11rem);
     }
 
     #carouselExampleFade {
@@ -127,7 +125,6 @@
 @media screen and (min-width: 698px) and (max-width: 992px) {
     header {
         height: 60vh;
-        background-color: aqua;
         background-size: cover;
     }
 
@@ -141,10 +138,12 @@
     .head-container {
         transform: translate(-.2rem, 14rem);
     }
-    #footer .row{
+
+    #footer .row {
         flex-direction: column;
-    } 
-    .w-sm-100{
+    }
+
+    .w-sm-100 {
         width: 100%;
         text-align: center;
     }
