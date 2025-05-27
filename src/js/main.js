@@ -1,3 +1,30 @@
+let links = document.querySelectorAll('.nav-link')
+
+// for (let i = 0; i < links.length; i++) {
+//     links[i].addEventListener('click',function (e) {
+//         e.preventDefault()
+//         links[i]?.classList.add('active')
+//         links[i+1]?.classList.remove('active')
+//         links[i+2]?.classList.remove('active')
+//         links[i+3]?.classList.remove('active')
+//         links[i+4]?.classList.remove('active')
+//         links[i-1]?.classList.remove('active')
+//         links[i-2]?.classList.remove('active')
+//         if (links[i].innerHTML  == 'عن الجمعية') {
+//             window.location.href = 'src/about.html'
+//         }else if (links[i].innerHTML  == 'البوم الصور') {
+//             window.location.href = 'src/photos.html'
+//         }else if (links[i].innerHTML  == 'الفيدوهات') {
+//             window.location.href = 'src/videos.html'
+//         }else if(links[i].innerHTML  == 'اتبرع الآن') {
+//             window.location.href = 'src/register.html'
+//         }
+//     })
+    
+    
+// }
+
+
 
 // calc tbro3
 let moneyInp = document.getElementById('moneyInp')
@@ -232,7 +259,6 @@ function calcProgressWidth() {
     let totalMoney = Number(document.querySelector('#totalMoney')?.innerHTML)
     progressBar.style.width = `${collectMoney * 100 / totalMoney}%`
     progressBar.innerHTML = `${Math.ceil(collectMoney * 100 / totalMoney)}%`
-    console.log();
 
 }
 calcProgressWidth()
