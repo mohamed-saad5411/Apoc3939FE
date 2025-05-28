@@ -20,22 +20,29 @@ let links = document.querySelectorAll('.nav-link')
 //             window.location.href = 'src/register.html'
 //         }
 //     })
-
-
 // }
 
+
+// for admin
 let adminPassword = document.getElementById('adminPassword')
 let adminName = document.getElementById('adminName')
-let adminvalueName=''
-let adminvaluePass=''
-adminName.addEventListener('input',function(){
-    adminvalueName=adminName.value
-})
-adminPassword.addEventListener('input',function(){
-    adminvaluePass=adminPassword.value
+let displayUserTableBtn = document.getElementById('displayUserTableBtn')
+
+displayUserTableBtn?.addEventListener('click', function (e) {
+    e.preventDefault()
+    if (adminName.value === 'admin' && adminPassword.value === '1234') {
+        getAllUsers()
+        displayTable()
+    } else {
+        displayDanger()
+    }
 })
 
-if (adminvalueName == 'mohamed' && adminvaluePass=='1234') {
+function displayDanger() {
+    document.getElementById('dangerMsg').classList.remove('d-none')
+}
+function displayTable() {
+    document.getElementById('dangerMsg').classList.add('d-none')
     document.getElementById('userTable').classList.remove('d-none')
 }
 
@@ -87,10 +94,10 @@ let userData = {
 let allUsers = []
 
 
-getBtn?.addEventListener('click', function (e) {
-    e.preventDefault()
-    getAllUsers()
-})
+// getBtn?.addEventListener('click', function (e) {
+//     e.preventDefault()
+//     getAllUsers()
+// })
 
 async function getAllUsers() {
     // const url = "http://localhost:5000/api/v1/users";
