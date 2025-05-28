@@ -20,11 +20,24 @@ let links = document.querySelectorAll('.nav-link')
 //             window.location.href = 'src/register.html'
 //         }
 //     })
-    
-    
+
+
 // }
 
+let adminPassword = document.getElementById('adminPassword')
+let adminName = document.getElementById('adminName')
+let adminvalueName=''
+let adminvaluePass=''
+adminName.addEventListener('input',function(){
+    adminvalueName=adminName.value
+})
+adminPassword.addEventListener('input',function(){
+    adminvaluePass=adminPassword.value
+})
 
+if (adminvalueName == 'mohamed' && adminvaluePass=='1234') {
+    document.getElementById('userTable').classList.remove('d-none')
+}
 
 // calc tbro3
 let moneyInp = document.getElementById('moneyInp')
@@ -276,18 +289,18 @@ let offsetTop = $('#whoWeAre').offset().top
 $(window).scroll(function () {
     let windowTop = $(window).scrollTop()
     if (window.innerWidth < 992) {
-            document.querySelector('#dropNav').addEventListener('click', () => {
-                document.querySelector('.res-nav').classList.remove('d-none')
-                document.body.classList.add("overflow-hidden")
-            })
-            document.getElementById('closeDropNav').addEventListener('click', () => {
-                document.querySelector('.res-nav').classList.add('d-none')
-                document.body.classList.remove("overflow-hidden")
-            })
-            document.getElementById('scrollSmNav').classList.remove("d-none");
-        } else {
-            document.getElementById('scrollSmNav').classList.add("d-none");
-        }
+        document.querySelector('#dropNav').addEventListener('click', () => {
+            document.querySelector('.res-nav').classList.remove('d-none')
+            document.body.classList.add("overflow-hidden")
+        })
+        document.getElementById('closeDropNav').addEventListener('click', () => {
+            document.querySelector('.res-nav').classList.add('d-none')
+            document.body.classList.remove("overflow-hidden")
+        })
+        document.getElementById('scrollSmNav').classList.remove("d-none");
+    } else {
+        document.getElementById('scrollSmNav').classList.add("d-none");
+    }
     if (windowTop > offsetTop) {
         document.getElementById('toUp').classList.remove("opacity-0");
         document.getElementById('scrollNav')?.classList.remove("d-none");
