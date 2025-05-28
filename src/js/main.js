@@ -43,6 +43,7 @@ function displayDanger() {
 }
 function displayTable() {
     document.getElementById('dangerMsg').classList.add('d-none')
+    document.getElementById('adminForm').classList.add('d-none')
     document.getElementById('userTable').classList.remove('d-none')
 }
 
@@ -281,7 +282,6 @@ function calcProgressWidth() {
     progressBar.innerHTML = `${Math.ceil(collectMoney * 100 / totalMoney)}%`
 
 }
-calcProgressWidth()
 
 
 
@@ -292,19 +292,12 @@ calcProgressWidth()
 
 
 
-let offsetTop = $('#whoWeAre').offset().top
+
+let offsetTop = $('#whoWeAre').offset()?.top
 $(window).scroll(function () {
     let windowTop = $(window).scrollTop()
     if (window.innerWidth < 992) {
-        document.querySelector('#dropNav').addEventListener('click', () => {
-            document.querySelector('.res-nav').classList.remove('d-none')
-            document.body.classList.add("overflow-hidden")
-        })
-        document.getElementById('closeDropNav').addEventListener('click', () => {
-            document.querySelector('.res-nav').classList.add('d-none')
-            document.body.classList.remove("overflow-hidden")
-        })
-        document.getElementById('scrollSmNav').classList.remove("d-none");
+        document.getElementById('scrollSmNav')?.classList.remove("d-none");
     } else {
         document.getElementById('scrollSmNav').classList.add("d-none");
     }
@@ -327,7 +320,18 @@ $(window).scroll(function () {
     } else {
         document.getElementById('toUp').classList.add("opacity-0");
         document.getElementById('scrollNav')?.classList?.add("d-none");
-        document.getElementById('scrollSmNav').classList.add("d-none");
+        document.getElementById('scrollSmNav')?.classList.add("d-none");
     }
 
 });
+
+document.querySelector('#dropNav').addEventListener('click', () => {
+    document.querySelector('.res-nav').classList.remove('d-none')
+    document.body.classList.add("overflow-hidden")
+})
+document.getElementById('closeDropNav').addEventListener('click', () => {
+    document.querySelector('.res-nav').classList.add('d-none')
+    document.body.classList.remove("overflow-hidden")
+})
+
+calcProgressWidth()

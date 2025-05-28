@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/rwd.css">
     <link rel="stylesheet" href="css/animate.css">
-<!-- ****************** -->
+    <!-- ****************** -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -25,11 +25,11 @@
     <title>Apoc 3939/اتبرع الآن </title>
 </head>
 
-<body>
+<body id="top">
     <nav id="mainNav" class="navbar fixed- d- bg-white navbar-expand-lg top-0 start-0 end-0 bg-body-">
         <div data-wow-delay=".3s" class="container  bg-">
-            <a class="navbar-brand" href="../index.html"><img class="rounded-"
-                    src="images/logo-Apoc-2022.png" alt=""></a>
+            <a class="navbar-brand" href="../index.html"><img class="rounded-" src="images/logo-Apoc-2022.png"
+                    alt=""></a>
             <div class="collapse navbar-collapse d-flex align-items-center bg-" id="navbarSupportedContent">
                 <ul class="navbar-nav text-dark bg- mt-0 m-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -100,30 +100,68 @@
             </div>
         </div>
     </nav>
-
-
-    <section class="bg-body-tertiary container d-flex justify-content-evenly m-auto p-4 rounded-3 shadow my-3 bg">
-        <form id="formFristRegister" class=" p-3 w-100">
+    <!-- ************************ -->
+    <div id="toUp"
+        class="bg-mainColor opacity-100 rounded-circle pointer d-flex align-items-center justify-content-center position-fixed">
+        <a href="#top"><i class="fa-solid text-white fa-arrow-up fa-xl"></i></a>
+    </div>
+    <div id="dropNav"
+        class="bg-mainColor d-none rounded-circle pointer d-flex align-items-center justify-content-center position-fixed">
+        <i class="fa-solid text-white fa-bars fa-xl"></i>
+    </div>
+    <div class="res-nav overflow-hidden d-none position-fixed top-0 end-0 start-0 bottom-0 vh-100">
+        <div class="bg- d-flex flex-column align-items-center justify-content-center w-100 h-100">
+            <i id="closeDropNav" class="fa-solid fa-2xl mb-4 pointer fa-xmark"></i>
+            <ul class="navbar-nav text-white p-3 text-end  mt-0 m-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text- active fw-bold" aria-current="page" href="../index.html">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text- fw-bold" href="about.html">عن الجمعية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text- fw-bold" href="photos.html"> البوم الصور </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text- fw-bold" href="videos.html"> الفيدوهات </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text- fw-bold" href="register.html"> اتبرع الآن</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text- fw-bold" href="#footer"> تواصل معنا</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- ************************ -->
+    <section class="bg-body-tertiary form-container container d-flex justify-content-evenly m-auto p-4 rounded-3 shadow my-3 bg">
+        <form id="formFristRegister" class="text-white p-3 w-100">
             <!-- <h3 class="text-center fs-2 fw-bolder border-bottom pb-3 border-3 my-2 text-success">اول مرة تسجل ؟؟</h3> -->
             <div class="my-2">
-                <label for="userName" class="pb-1 fw-bold fs-5"> الاسم ثلاثي باللغة العربية : <span id="userValid" class="text-danger fw-normal d-none validation">*يجب ادخال الاسم</span></label>
+                <label for="userName" class="pb-1 fw-bold fs-5"> الاسم ثلاثي باللغة العربية : <span id="userValid"
+                        class="text-danger fw-normal d-none validation">*يجب ادخال الاسم</span></label>
                 <input class="form-control" type="text" name="userName" id="userName" value="">
             </div>
             <div class="my-2">
-                <label for="userEmail" class="pb-1 fw-bold fs-5"> الايميل : <span id="emailValid" class="text-danger fw-normal validation d-none">*يجب ادخال ايميل صحيح </span></label>
+                <label for="userEmail" class="pb-1 fw-bold fs-5"> الايميل : <span id="emailValid"
+                        class="text-danger fw-normal validation d-none">*يجب ادخال ايميل صحيح </span></label>
                 <input class="form-control" type="email" name="userEmail" id="userEmail" value="">
             </div>
             <div class="my-2">
-                <label for="userPhone" class="pb-1 fw-bold fs-5"> رقم التليفون: <span  id="phoneValid" class="text-danger d-none fw-normal validation">*يجب ادخال رقم التليفون صحيح</span></label>
+                <label for="userPhone" class="pb-1 fw-bold fs-5"> رقم التليفون: <span id="phoneValid"
+                        class="text-danger d-none fw-normal validation">*يجب ادخال رقم التليفون صحيح</span></label>
                 <input class="form-control" type="tel" name="userPhone" id="userPhone" value="">
             </div>
             <div class="my-2">
-                <label for="userPayment" class="pb-1 fw-bold fs-5">قيمة التبرع: <span id="paymentValid" class="text-danger d-none fw-normal validation">*يجب ادخال القيمة</span></label>
+                <label for="userPayment" class="pb-1 fw-bold fs-5">قيمة التبرع: <span id="paymentValid"
+                        class="text-danger d-none fw-normal validation">*يجب ادخال القيمة</span></label>
                 <input class="form-control" type="tel" name="userPayment" id="userPayment" value="">
             </div>
 
             <button type="" id="paymentBtn" class=" btn btn-success w-100 mt-4">اتبرع الآن</button>
-            <a href="allUsersForAdmin.html" class="w-100 mt-4 btn btn-secondary">users <span class="fw-bolder text-dark">*(Admins Only)</span></a>
+            <a href="allUsersForAdmin.html" class="w-100 mt-4 btn btn-secondary">users <span
+                    class="fw-bolder text-dark">*(Admins Only)</span></a>
         </form>
 
     </section>
@@ -133,7 +171,8 @@
             <div class="container bg-">
                 <div class="row align-items-center">
                     <div class="col-md-4">
-                        <a href="../index.html"> <img class="w-100 rounded-circle" src="images/final img/pp-.png" alt=""></a>
+                        <a href="../index.html"> <img class="w-100 rounded-circle" src="images/final img/pp-.png"
+                                alt=""></a>
                     </div>
                     <div class="col-md-4 w-sm-100 my-3">
                         <div class="d-flex w-75 m-auto bg- h-100 align-items-center icons justify-content-around">

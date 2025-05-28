@@ -1,4 +1,8 @@
 @media screen and (max-width: 698px) {
+    .form-container {
+        width: 90%;
+    }
+
     .carousel img {
         height: 400px;
     }
@@ -51,10 +55,11 @@
         color: rgb(41, 41, 184) !important;
     }
 
-    header img  {
+    header img {
         height: 37vh !important;
     }
-     header video {
+
+    header video {
         height: 50vh !important;
     }
 
@@ -183,6 +188,6 @@
     }
 
     nav .nav-link {
-        font-size: 0.9rem;
+        font-size: 0.8rem !important;
     }
 }
