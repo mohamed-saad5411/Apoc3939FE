@@ -50,40 +50,23 @@ function displayTable() {
 // calc tbro3
 let moneyInp = document.getElementById('moneyInp')
 let moneyBtn = document.getElementById('moneyBtn')
-
-let constructionProfitInp = document.getElementById('constructionProfitInp')
-let constructionBtn = document.getElementById('constructionBtn')
-
-let buildInp = document.getElementById('buildInp')
-let buildBtn = document.getElementById('buildBtn')
-
-let salary = document.getElementById('salary')
-let construction = document.getElementById('construction')
-let build = document.getElementById('build')
-
 let total = document.getElementById('total')
+let userPayment = document.getElementById('userPayment')
 
 totalMoney = 0
 function getData() {
-    // console.log(moneyInp.value);
     if (moneyInp.value >= 50) {
         let salaryCalc = (moneyInp.value * 0.025)
-        salary.innerHTML = salaryCalc.toFixed(2)
-        // let buildCalc = (buildInp.value * 0.025)
-        // build.innerHTML = buildCalc.toFixed(2)
-        // let constructionCalc = (constructionProfitInp.value * 0.025)
-        // construction.innerHTML = constructionCalc.toFixed(2)
-        totalMoney = salaryCalc
-        total.innerHTML = totalMoney.toFixed(2)
+        totalMoney = salaryCalc.toFixed(2)
+        total.innerHTML = totalMoney
     }
+    
 }
 
 // for register
-
 let userName = document.getElementById('userName')
 let userEmail = document.getElementById('userEmail')
 let userPhone = document.getElementById('userPhone')
-let userPayment = document.getElementById('userPayment')
 let getBtn = document.getElementById('getBtn')
 
 let userData = {
