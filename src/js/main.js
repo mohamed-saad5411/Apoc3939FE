@@ -1,32 +1,9 @@
-let links = document.querySelectorAll('.nav-link')
-
-// for (let i = 0; i < links.length; i++) {
-//     links[i].addEventListener('click',function (e) {
-//         e.preventDefault()
-//         links[i]?.classList.add('active')
-//         links[i+1]?.classList.remove('active')
-//         links[i+2]?.classList.remove('active')
-//         links[i+3]?.classList.remove('active')
-//         links[i+4]?.classList.remove('active')
-//         links[i-1]?.classList.remove('active')
-//         links[i-2]?.classList.remove('active')
-//         if (links[i].innerHTML  == 'عن الجمعية') {
-//             window.location.href = 'src/about.html'
-//         }else if (links[i].innerHTML  == 'البوم الصور') {
-//             window.location.href = 'src/photos.html'
-//         }else if (links[i].innerHTML  == 'الفيدوهات') {
-//             window.location.href = 'src/videos.html'
-//         }else if(links[i].innerHTML  == 'اتبرع الآن') {
-//             window.location.href = 'src/register.html'
-//         }
-//     })
-// }
-
 
 // for admin
 let adminPassword = document.getElementById('adminPassword')
 let adminName = document.getElementById('adminName')
 let displayUserTableBtn = document.getElementById('displayUserTableBtn')
+let spinnerLoad = document.getElementById('spinnerLoad')
 
 displayUserTableBtn?.addEventListener('click', function (e) {
     e.preventDefault()
@@ -60,7 +37,7 @@ function getData() {
         totalMoney = salaryCalc.toFixed(2)
         total.innerHTML = totalMoney
     }
-    
+
 }
 
 // for register
@@ -77,14 +54,7 @@ let userData = {
 }
 let allUsers = []
 
-
-// getBtn?.addEventListener('click', function (e) {
-//     e.preventDefault()
-//     getAllUsers()
-// })
-
 async function getAllUsers() {
-    // const url = "http://localhost:5000/api/v1/users";
     const url = "https://apoc3939betest3.vercel.app/api/v1/users";
     try {
         const response = await fetch(url, {
@@ -105,6 +75,7 @@ async function getAllUsers() {
                 <td>${user.payment}</td></tr>`
         })
         document.getElementById('userData').innerHTML = cartoona
+        spinnerLoad.classList.add('d-none')
     } catch (error) {
         console.error(error.message);
     }
@@ -193,14 +164,18 @@ async function rigester() {
     }
 }
 
-//http://localhost:3000/api/v1/user/register
 //payment
 let paymentBtn = document.getElementById('paymentBtn')
+let spinnerLoadBtn = document.getElementById('spinnerLoadBtn')
+
+function loadingDisplay() {
+    paymentBtn.classList.add('d-none')
+    spinnerLoadBtn.classList.remove('d-none')
+}
 paymentBtn?.addEventListener('click', async (e) => {
     e.preventDefault()
     rigester()
-    // console.log(e);
-
+    loadingDisplay()
     await fetch('https://apoc3939betest3.vercel.app/api/v1/register/create-checkout-session/682649627d11fb0aa148216a', {
         method: 'POST',
         body: JSON.stringify({
@@ -213,8 +188,7 @@ paymentBtn?.addEventListener('click', async (e) => {
         },
     }).then(async (res) => {
         if (res.ok) return res.json()
-        // const json = await res.json()
-        // return await Promise.reject(json)
+
     }).then(({ url }) => {
         window.location.href = url
         // console.log(url);
@@ -223,36 +197,6 @@ paymentBtn?.addEventListener('click', async (e) => {
     )
 
 })
-// async function payment() {
-//     const url = "http://localhost:3000/api/v1/user/register/682649627d11fb0aa148216a";
-//     try {
-//         const response = await fetch(url, {
-//             method: 'POST',
-//             body: JSON.stringify({
-//                 name: userName.value,
-//                 email: userEmail.value,
-//                 payment: userPayment.value,
-//             }),
-//             headers: {
-//                 "Content-Type": "application/json",
-//             },
-//         });
-//         if (!response.ok) {
-//             throw new Error(`Response status: ${response.status}`);
-//         }
-
-//         const myjson = await response.json();
-//         console.log(myjson);
-//     } catch (error) {
-//         console.error(error.message);
-//     }
-// }
-
-
-
-// for nav
-
-
 
 // progress bar
 let progress = document.querySelector('.progress')
@@ -265,10 +209,6 @@ function calcProgressWidth() {
     progressBar.innerHTML = `${Math.ceil(collectMoney * 100 / totalMoney)}%`
 
 }
-
-
-
-
 
 
 
@@ -307,7 +247,6 @@ $(window).scroll(function () {
     }
 
 });
-
 document.querySelector('#dropNav').addEventListener('click', () => {
     document.querySelector('.res-nav').classList.remove('d-none')
     document.body.classList.add("overflow-hidden")

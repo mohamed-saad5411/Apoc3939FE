@@ -4,9 +4,11 @@
     scroll-behavior: smooth;
     --main-color: rgb(0, 0, 135)
 }
-.bg-success-light{
+
+.bg-success-light {
     background-color: #62ab8a;
 }
+
 h1,
 h2,
 h3,
@@ -196,6 +198,14 @@ header .h1 {
     height: 300px;
 }
 
+#tbroaPage img {
+    /* width: 20rem !important; */
+    height: 20rem;
+}
+
+#tbroaPage .col-md-4>div {
+    /* height: 27rem; */
+}
 
 /* ................... forms ..................... */
 form {
