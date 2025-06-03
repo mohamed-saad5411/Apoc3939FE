@@ -211,6 +211,16 @@ function calcProgressWidth() {
 }
 
 
+let items = document.querySelectorAll('.dropdown-item')
+let choosenValue = 0
+for (let i = 0; i < items.length; i++) {
+    items[i].addEventListener('click', function () {
+        choosenValue = items[i].value
+        document.getElementById('choosenValue').innerHTML=choosenValue
+
+    })
+
+}
 
 
 

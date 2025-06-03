@@ -2,6 +2,9 @@
     .form-container {
         width: 90%;
     }
+    #formFristRegister {
+        width: 100% !important;
+    }
 
     .carousel img {
         height: 400px;
