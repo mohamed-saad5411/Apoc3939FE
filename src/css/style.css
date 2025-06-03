@@ -159,8 +159,8 @@ header .h1 {
 
 /* ................... about..................... */
 #imgContainer img {
-    width: 17rem;
-    height: 17rem;
+    width: 16rem !important;
+    height: 16rem !important;
 }
 
 .progress-bar {
@@ -199,13 +199,9 @@ header .h1 {
 }
 
 #tbroaPage img {
-    /* width: 20rem !important; */
     height: 20rem;
 }
 
-#tbroaPage .col-md-4>div {
-    /* height: 27rem; */
-}
 
 /* ................... forms ..................... */
 form {
