@@ -82,6 +82,9 @@ async function getAllUsers() {
 }
 
 //---------------------------
+let paymentBtn = document.getElementById('paymentBtn')
+let spinnerLoadBtn = document.getElementById('spinnerLoadBtn')
+
 let validUserName = ''
 let validUserEmail = ''
 let validUserPay = ''
@@ -165,8 +168,6 @@ async function rigester() {
 }
 
 //payment
-let paymentBtn = document.getElementById('paymentBtn')
-let spinnerLoadBtn = document.getElementById('spinnerLoadBtn')
 
 function loadingDisplay() {
     paymentBtn.classList.add('d-none')
@@ -216,7 +217,7 @@ let choosenValue = 0
 for (let i = 0; i < items.length; i++) {
     items[i].addEventListener('click', function () {
         choosenValue = items[i].value
-        document.getElementById('choosenValue').innerHTML=choosenValue
+        document.getElementById('choosenValue').innerHTML = choosenValue
 
     })
 
